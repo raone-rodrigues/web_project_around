@@ -1,4 +1,3 @@
-// initialCards
 const initialCards = [
   {
     name: "Vale de Yosemite",
@@ -55,14 +54,11 @@ function renderCard(card) {
   currentCard
     .querySelector(".elements__like-icon")
     .addEventListener("click", (evt) => {
-      if (evt.target.getAttribute("src") === "./images/like-button.png") {
-        return evt.target.setAttribute(
-          "src",
-          "./images/like-button-clicked.png"
-        );
+      if (evt.target.getAttribute("src") === "./images/Groupheart.svg") {
+        return evt.target.setAttribute("src", "./images/likedark.png");
       }
 
-      return evt.target.setAttribute("src", "./images/like-button.png");
+      return evt.target.setAttribute("src", "./images/Groupheart.svg");
     });
 
   return currentCard;
@@ -75,7 +71,6 @@ initialCards.forEach((card, index) => {
   elements.append(cardItem);
 });
 
-// popupAddCardOpenAndCloseButton
 const addCardButton = document.querySelector(".profile__add-card-icon");
 const popupAddCards = document.querySelector(".popup-add-card");
 const closePopupAddCardButton = document.querySelector(
@@ -98,7 +93,6 @@ addCardButton.addEventListener("click", () => {
   });
 });
 
-// popupOpenAndCloseButton
 const editButton = document.querySelector(".profile__edit-button");
 const popup = document.querySelector(".popup");
 const closePopupButton = document.querySelector(".popup__close-button");
@@ -131,7 +125,6 @@ popupAddCards.addEventListener("click", (event) => {
   }
 });
 
-// popupViewImage
 const popupViewImage = document.querySelector(".popup-view-image");
 const closePopupViewImageButton = document.querySelector(
   ".popup-view-image__close-button"
@@ -194,7 +187,6 @@ addCardForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-// validateForm
 const validationForm = (
   input1Id,
   input2Id,
@@ -265,7 +257,6 @@ const validationForm = (
     return handleSaveProfileInformation(input1, input2);
   }
 
-  // preciso concertar o fechamento do popup de criação de card
   if (actionButton.id === "create-button") {
     createButton.addEventListener("click", () => {
       popupAddCards.classList.remove("popup-add-card_opened");
@@ -290,7 +281,6 @@ const handleSaveProfileInformation = (input1, input2) => {
   });
 };
 
-// handlerCreateNewCardForm
 const title = document.querySelector(".profile__name");
 const image = document.querySelector(".profile__role");
 

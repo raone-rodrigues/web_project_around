@@ -62,6 +62,9 @@
   width: 21px;
   height: 19px;
 }
+.elements__like-icon:checked {
+  background-color: black;
+}
 
 @media screen and (max-width: 1024px) {
   .elements {
