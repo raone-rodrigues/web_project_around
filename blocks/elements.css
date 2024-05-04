@@ -35,7 +35,7 @@
 .elements__wrapper-text-and-like-button {
   padding: 0 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 287px;
   background-color: #ffffff;
